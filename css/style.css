@@ -1,31 +1,149 @@
-/* Sections Common
---------------------------------*/
-.section-title {
-  font-size: 22px;
-  color: #484848;
-  /*text-transform: none;*/
-  /*text-align: center;*/
-  /*font-weight: 700;*/
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+  background: #fff;
+  color: #666666;
+  font-family: 'MicrosoftYaHei';
 }
-.section-title span{
-  color:#FFC600;
+
+li{
+  list-style: none;
 }
-#line{
-	width: 100%;
-	height: 6px;
-	background-color: #FFC600;
+
+a {
+  color: #FF373F;
+  transition: 0.5s;
 }
-body{
-	margin: 0;
+
+a:hover, a:active, a:focus {
+  color: #FF373F;
+  outline: none;
+  text-decoration: none;
 }
+
+p {
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  display: block;
+  background:#FFC600;
+  color: #fff;
+  padding: 6px 12px 9px 12px;
+  font-size: 16px;
+  border-radius: 2px;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+}
+
+.back-to-top:focus {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background:#FFC600;
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Welcome
+--------------------------------------------------------------*/
+#hero {
+  display: table;
+  width: 100%;
+  /*height: 100vh;*/
+  height: 957px;
+  background:url(../img/index.png) top center fixed;
+  background-size: 100% 100%;
+}
+
+#hero .hero-container {
+  background: rgba(0, 0, 0, 0.4);
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+  font-family:MicrosoftYaHei;
+}
+
+#hero h1 {
+  margin: 40px 0 16px 0;
+  line-height: 57px;
+  color: #FFFFFE;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+}
+
+#hero h2 {
+  color: #FFFFFE;
+  margin-bottom: 52px;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  #hero h2 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #hero h2 .rotating {
+    display: block;
+  }
+}
+#hero .hero-btn{
+  width: 125px;
+  height: 28px;
+  background: #FFC600;
+  margin:0 auto;
+  cursor: pointer;
+}
+#hero .hero-btn a{
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  color: #181E32;
+  line-height: 28px;
+}
+
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 
 #header {
   width: 100%;
+  background:rgba(26,26,26,1);
   background: #1A1A1A;
-  height: 60px;
+  height: 59px;
   overflow: hidden;
 }
 
@@ -51,7 +169,7 @@ body{
 
 #header #logo img {
   padding: 0;
-  margin-left: 12px;
+  margin-left: 0px;
   max-height: 50px;
   width:131px;
   height:36px;
@@ -71,6 +189,29 @@ body{
 
 .is-sticky #header {
   box-shadow: 0px 3px 25px #1A1A1A;
+}
+
+
+/* -----------------------------
+# Sections Common
+--------------------------------*/
+.section-title {
+  font-size: 22px;
+  color: #484848;
+  text-transform: none;
+  text-align: center;
+  font-weight: 700;
+}
+.section-title span{
+  color:#FFC600;
+}
+#line{
+	width: 100%;
+	height: 6px;
+	background-color: #FFC600;
+}
+body{
+	margin: 0;
 }
 
 /*--------------------------------------------------------------
@@ -370,93 +511,58 @@ body.mobile-nav-active #mobile-nav {
 body.mobile-nav-active #mobile-nav-toggle {
   color: #fff;
 }
-/*--------------------------------------------------------------
-# Welcome
---------------------------------------------------------------*/
-#hero {
-  display: table;
-  width: 100%;
-  /*height: 100vh;*/
-  height: 657px;
-  background:url(../img/index.png) top center fixed;
-  background-size: 100% 100%;
-}
 
-#hero .hero-container {
-  background: rgba(0, 0, 0, 0.4);
-  display: table-cell;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  vertical-align: middle;
-  font-family:MicrosoftYaHei;
-}
 
-#hero h1 {
-  margin: 40px 0 16px 0;
-  line-height: 35px;
-  color: #FFFFFE;
-  font-size: 31px;
-  font-weight: normal;
-}
-#hero h2{
-	color: #F6F6F6;
-}
-#hero .hero-btn{
-  width: 125px;
-  height: 28px;
-  background: #FFC600;
-  margin:0 auto;
-  cursor: pointer;
-}
-#hero .hero-btn a{
-  width: 100%;
-  height: 100%;
-  font-size: 18px;
-  color: #181E32;
-  line-height: 28px;
-  text-decoration:none;
-}
-/*bitrise Capital*/
+/* bitriseCapital Section
+--------------------------------*/
+
 #bitriseCapital{
-	margin: 100px;
-	width: 1150px;
-	height: 316px;
-	background-color:#F4F4F4;
-	 margin: auto;
+  background: #fff;
+  padding: 71px 0 80px;
+  overflow: hidden;
+  width: 100%;
+  height: 606px;
 }
 #money{
-	width: 567px;
-	height: 316px;
-	background: url(../img/img.png);
-	position:absolute;
+  margin-top: 80px;
+  width: 567px;
+  height: 316px;
+  background: url(../img/img.png);
+  position:absolute;
 
 }
 #intro{
-	padding: 52px;
-	margin-top: 60px;
-	margin-left: 616px;
-	
-	width: 417px;
-	
+  margin-top: 80px;
+  padding: 72px;
+  /*margin-top: 60px;*/
+  margin-left: 567px;
+  position:relative;
+  width:585px;
+  height:316px; 
+  background:rgba(241,241,241,1);
+
+  
 }
 #intro .title{
-	
+  
 }
 #intro .introText{
-	
+  
 }
 
-
-/*ourteam*/
+/* ourTeam Section
+--------------------------------*/
 #ourTeam{
-	height: 500px;
+	height: 606px;
 	width: 100%;
 	background-color:#F4F4F4;
-	margin-top: 50px;
+}
+#ourTeam .section-title{
+  text-align: left;
+  margin: 55px 0 47px;
 }
 #ourTeam .team-img{
-	margin: 0 0 30px 0;
+	margin: 30px 0 30px 0;
 	position: relative;
 }
 #ourTeam .team-img:hover .img-hover{
@@ -472,39 +578,26 @@ body.mobile-nav-active #mobile-nav-toggle {
 #ourTeam .img-hover .img-title{
 	font-size: 18px;
 	color: #FFC600;
-	
 	margin-top: 70px;
 	margin-left: 20px;
 }
 #ourTeam .img-hover .img-des{
-	font-size: 14px;
+	font-size: 12px;
 	color:#FFFFFF;
 	font-family: "微软雅黑";
-	
-	
+  margin-top: 40px;
+  margin-left: 20px;
+  width:258px;
 }
-#sun .img-des{
-	margin-top: 40px;
-	margin-left: 20px;
+#ourTeam .img-below{
+  font-size: 18px;
+  color:#484848;
+  font-family: "微软雅黑";
+  color:rgba(72,72,72,1);
+  line-height:24px;
+  width:163px;
+  height:43px;
 }
-#kong .img-des{
-	margin-top: 40px;
-	margin-left: 20px;
-}
-#shao .img-des{
-	margin-top: 30px;
-	margin-left: 20px;
-}
-#guo .img-des{
-	margin-top: 60px;
-	margin-left: 20px;
-}
-
-
-
-
-
-
 
 
 
